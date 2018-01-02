@@ -7,10 +7,10 @@ debug: CFLAGS ?= -O0 -g
 debug: CFLAGS += -std=c99 -pedantic -Wall -Wextra -Werror
 debug: hyx
 
-hyx: *.h *.c
+hyx: src/*.h src/*.c
 	$(CC) \
 		$(CFLAGS) \
-		hyx.c common.c blob.c history.c view.c input.c memstream.c \
+		src/hyx.c src/common.c src/blob.c src/history.c src/view.c src/input.c src/memstream.c \
 		-o hyx
 
 clean:
